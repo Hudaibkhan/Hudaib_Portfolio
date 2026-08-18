@@ -103,7 +103,7 @@ export function HeroSection({ about }: HeroSectionProps) {
             {/* CTAs */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-3 w-full sm:w-auto mb-9 sm:mb-10"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto mb-9 sm:mb-10"
             >
               <motion.a
                 href="#projects"
@@ -136,22 +136,25 @@ export function HeroSection({ about }: HeroSectionProps) {
               >
                 About & Philosophy
               </motion.a>
+            </motion.div>
 
-              {about?.resumeUrl && (
+            {/* Resume Link - Separate row on mobile, inline on desktop */}
+            {about?.resumeUrl && (
+              <motion.div variants={itemVariants} className="mb-9 sm:mb-10 sm:-mt-6">
                 <motion.a
                   href={about.resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full text-xs font-semibold text-[#8A8375] hover:text-[#1B1B1B] transition-colors duration-300"
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold text-[#8A8375] hover:text-[#1B1B1B] hover:bg-[#FFFFFF] hover:border hover:border-[#E7E3D8] transition-all duration-300"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.3, ease: 'easeOut' }}
                 >
                   <FileText className="w-4 h-4" />
-                  Resume
+                  View Resume
                 </motion.a>
-              )}
-            </motion.div>
+              </motion.div>
+            )}
 
             {/* Stats bar */}
             <motion.div
