@@ -41,6 +41,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Muhammad Hudaib' }],
   creator: 'Muhammad Hudaib',
+  verification: {
+    google: 'IHnVSigFZb-TC7ewqYIj16IYGI-EPKxwYCP4bx4lc2w',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
